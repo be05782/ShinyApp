@@ -12,7 +12,7 @@ shinyUI(
                         h3("Q4.how old is the country ?"),
                         sliderInput("nby",label="Guess the age", value=0,min=100,max=200,step=2),
                         h3("Q5.Prediction of the part(%) of non belgian population in Brabant Wallon (belgium) "),
-                        radioButtons("part",label="in 2020, according to the data 2010-2015 published in http://data.gov.be/en/node/17268,the part would be ",c(0,5,10,20)),
+                        radioButtons("part",label="in 2020, the part would be ",c(0,5,10,20)),
                         actionButton("go","GO!")
                 ),
                 mainPanel(tabsetPanel(
@@ -41,7 +41,13 @@ shinyUI(
                                 h4("Prediction for the next years"),
                                 plotOutput("show5")),
                         tabPanel("documentation", 
-                                 h1("This is just a little quiz about Belgium")))
+                                 h1("This is just a little quiz about Belgium"),
+                                 h3("Q1-  enter the 4 missing words of this song. If you have no idea get there http://lyricstranslate.com/en/le-plat-pays-flat-land.html"),
+                                 h3("Q2 - like all country, Belgium has a motto, there is one word missing (it is the french word for -strenght-"),
+                                 h3("Q3 - just check the boxes containing true lies about belgium"),
+                                 h3("Q4 - move the circle on the slider to indicate the age of Belgium"),
+                                 h3("Q5 - just guess, then the app will display a prediction based on open data published in http://data.gov.be/en/node/17268")
+                                 ))
                 )
         )
 )
